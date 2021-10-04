@@ -1,0 +1,11 @@
+@import "../variables";
+@import "../variables";
+
+.passion-wrapper {
+    display: flex;
+    background-color: $navbarBackground;
+
+    .items-container {
+        display: flex;
+    }
+}

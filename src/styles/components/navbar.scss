@@ -3,28 +3,30 @@
 .navbar {
   width: 100%;
   height: 96px;
-  background-color: $navbarBackground;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.25);
+  // background-color: $navbarBackground;
+  // box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
   font-size: 1.4rem;
+  transition: 1s;
 
   .navbar-container {
     display: flex;
-    max-width: 1500px;
+    // max-width: 1500px;
     justify-content: center;
     align-items: center;
     height: 96px;
-    max-width: 1500px;
+    transition: 1s;
+    // max-width: 1500px;
     .menu-icon {
       display: none;
     }
 
     .navbar-logo {
-      color: $text-light;
+      color: white;
       text-decoration: none;
       justify-self: start;
       font-size: 2rem;
@@ -48,38 +50,80 @@
       margin-right: 2rem;
       width: 60vw;
 
+      // .nav-item {
+      //   height: 80px;
+      //   .nav-link {
+      //     display: flex;
+      //     text-decoration: none;
+      //     color: white;
+      //     align-items: center;
+      //     padding: 0rem 1rem;
+      //     height: 100%;
+      //     transition: 0.4s;
+      //     top: 0;
+
+      //     &:hover {
+      //       color: $text-light;
+      //       transform: scale(1.05);
+      //     }
+      //   }
+      // }
       .nav-item {
         height: 80px;
-        .nav-link {
           display: flex;
           text-decoration: none;
-          color: $text-light;
+          color: white;
           align-items: center;
           padding: 0rem 1rem;
           height: 100%;
-          transition: 0.8s;
+          transition: 0.4s;
           top: 0;
+          cursor: pointer;
 
           &:hover {
-            color: $nav-links-hoverColor;
+            color: $text-light;
+            transform: scale(1.05);
           }
-        }
       }
     }
   }
 }
 
-@media screen and (max-width: 960px) {
+.scroll {
+  height: 60px;
+  background-color: $navbarBackground;
+  transition: 1s;
+
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+
+  .navbar-container {
+    transition: 1s;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .navbar {
+    height: 60px;
+  background-color: $navbarBackground;
+
     .navbar-container {
+    height: 60px;
+
+      .navbar-logo {
+        font-size: 1.5rem;
+      }
+
       .menu-icon {
         display: block;
         position: absolute;
-        font-size: 2rem;
+        font-size: 1.3rem;
         top: 0;
         right: 0;
         transform: translate(-100%, 60%);
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         cursor: pointer;
         color: white;
       }
@@ -88,9 +132,9 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 90vh;
+        height: 30vh;
         position: absolute;
-        top: 96px;
+        top: 60px;
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;

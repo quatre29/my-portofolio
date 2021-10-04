@@ -1,20 +1,21 @@
 import React from "react";
+import "../styles/components/button.scss";
 
-const STYLE = ["btn--primary", "btn--outline"];
-const SIZES = ["btn--medium", "btn--large"];
+const STYLE = ["primary", "outline"];
+const SIZES = ["medium", "large"];
 
 const Button = ({ children, type, onClick, buttonStyle, buttonSize }) => {
   const checkButtonStyle = STYLE.includes(buttonStyle) ? buttonStyle : STYLE[0];
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
-    <button
+    <div
       className={`btn ${checkButtonStyle} ${checkButtonSize}`}
       onClick={onClick}
       type={type}
     >
-      {children}
-    </button>
+      {children.toUpperCase()}
+    </div>
   );
 };
 

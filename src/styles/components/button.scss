@@ -1,0 +1,30 @@
+@import "../variables";
+
+.btn {
+  padding: 1em 2em;
+  color: $btnText;
+  border: 0.15em solid $btnBorder;
+  margin: 0.1em;
+  font-weight: 400;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  &:hover {
+    transform: translateY(-3px) scale(1.03)
+  }
+}
+
+.primary {
+  border: 0.15em solid $btnPrimary;
+  background-color: #09c372;
+  transition: 0.4s;
+}
+
+.outline {
+  border: 0.15em solid $btnOutline;
+  transition: 0.4s;
+  &:hover {
+    background-color: $btnOutline;
+  }
+}
