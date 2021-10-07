@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "../styles/components/navbar.scss";
 
-const Navbar = ({aboutScroll}) => {
+const Navbar = ({aboutScroll, passionScroll, xpScroll}) => {
   const [click, setClick] = useState(false);
 
   useEffect(() => {
@@ -27,6 +27,16 @@ const Navbar = ({aboutScroll}) => {
 
   const goToAbout = () => {
     aboutScroll()
+    setClick(false)
+  }
+
+  const goToPassions = () => {
+    passionScroll()
+    setClick(false)
+  }
+
+  const goToXp = () => {
+    xpScroll()
     setClick(false)
   }
 
@@ -59,12 +69,20 @@ const Navbar = ({aboutScroll}) => {
               Contact
             </Link>
           </li> */}
-          <li className='nav-item' onClick={closeMobileMenu}>
-              Portofolio
-          </li>
           <li className='nav-item' onClick={goToAbout}>
               About
           </li>
+          <li className='nav-item' onClick={goToPassions}>
+              Passions
+          </li>
+          <li className='nav-item' onClick={goToXp}>
+              Experience
+          </li>
+          <li className='nav-item' onClick={closeMobileMenu}>
+              Portofolio
+          </li>
+
+
           <li className='nav-item' onClick={closeMobileMenu}>
               Contact
           </li>

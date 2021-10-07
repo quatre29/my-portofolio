@@ -1,11 +1,94 @@
 @import "../variables";
-@import "../variables";
 
 .passion-wrapper {
     display: flex;
     background-color: $navbarBackground;
+    margin-top: 5rem;
+    padding: 5rem;
+    flex-direction: column;
+    color: $text-light;
+
+   .title {
+       text-align: center;
+       font-weight: 300;
+       margin-bottom: 3rem;
+   }
 
     .items-container {
         display: flex;
+        
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .item-icon {
+                padding: 4rem;
+                font-size: 4rem;
+                background-color: $btnOutline;
+                border-radius: 50%;
+                color: $navbarBackground
+            }
+
+            .item-title {
+                margin-bottom: 0;
+                font-weight: 400;
+                padding: 1rem 0;
+                font-size: 1.4rem;
+
+            }
+
+            .item-text {
+                text-align: center;
+                padding: 0 5rem;
+                line-height: 1.6rem;
+                font-weight: 300;
+            }
+        }
     }
 }
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .passion-wrapper {
+   
+   
+   
+   
+       .items-container {
+           flex-direction: column;
+           
+           .item {
+                margin-top: 4rem;
+   
+               .item-text {
+                    padding: 0 6rem;
+               }
+           }
+       }
+   }
+   }
+
+   @media screen and (max-width: 768px) {
+
+    .passion-wrapper {
+   
+   
+   
+   
+       .items-container {
+           flex-direction: column;
+           
+           .item {
+                margin-top: 4rem;
+   
+               .item-text {
+                    padding: 0 1rem;
+               }
+           }
+       }
+   }
+   }
